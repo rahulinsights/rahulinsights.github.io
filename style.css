@@ -1,87 +1,95 @@
+/* RESET + BACKGROUND */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8, #7dd3fc);
+  color: #0f172a;
+  overflow-x: hidden;
 }
 
-/* NAVBAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 40px;
-  background: #020617;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
+/* SOFT GLOW */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.4), transparent 40%),
+              radial-gradient(circle at 80% 70%, rgba(255,255,255,0.3), transparent 40%);
+  z-index: -1;
 }
 
 /* HERO */
 .hero {
-  text-align: center;
-  padding: 80px 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 65px;
+  margin: 0;
 }
 
 .hero p {
-  color: #94a3b8;
+  opacity: 0.8;
 }
 
 /* BUTTON */
 .btn {
-  display: inline-block;
   margin-top: 20px;
-  padding: 10px 20px;
-  background: #2563eb;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: #0f172a;
   color: white;
   text-decoration: none;
-  border-radius: 6px;
+  transition: 0.3s;
 }
 
-/* CARDS */
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* CARD */
 .card {
-  background: #020617;
-  margin: 20px;
-  padding: 25px;
-  border-radius: 10px;
+  width: 75%;
+  margin: 40px auto;
+  padding: 30px;
+
+  background: rgba(255,255,255,0.6);
+  border-radius: 18px;
+
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.4);
+
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
 /* SKILLS */
 .skills span {
   display: inline-block;
-  background: #1e293b;
-  padding: 8px 12px;
-  margin: 5px;
-  border-radius: 6px;
+  margin: 8px;
+  padding: 10px 18px;
+  border-radius: 25px;
+  background: rgba(0,0,0,0.1);
 }
 
 /* PROJECT */
 .project {
-  margin-top: 10px;
-  padding: 10px;
-  background: #1e293b;
-  border-radius: 6px;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.05);
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
-  color: #94a3b8;
+  margin: 40px 0;
+  opacity: 0.7;
 }
