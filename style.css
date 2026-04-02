@@ -1,75 +1,87 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* BODY */
 body {
-    background: #0f172a;
-    color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
 }
 
 /* NAVBAR */
 nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    background: #020617;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #020617;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 /* HERO */
 .hero {
-    text-align: center;
-    padding: 100px 20px;
+  text-align: center;
+  padding: 80px 20px;
 }
 
 .hero h1 {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .hero p {
-    margin-top: 10px;
-    color: #94a3b8;
+  color: #94a3b8;
 }
 
-/* CARD SECTIONS */
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* CARDS */
 .card {
-    background: #020617;
-    margin: 30px auto;
-    padding: 30px;
-    border-radius: 12px;
-    width: 80%;
+  background: #020617;
+  margin: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 /* SKILLS */
 .skills span {
-    background: #1e293b;
-    padding: 8px 15px;
-    margin: 5px;
-    display: inline-block;
-    border-radius: 8px;
+  display: inline-block;
+  background: #1e293b;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 6px;
+}
+
+/* PROJECT */
+.project {
+  margin-top: 10px;
+  padding: 10px;
+  background: #1e293b;
+  border-radius: 6px;
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    color: #94a3b8;
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
 }
